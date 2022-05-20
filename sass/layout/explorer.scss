@@ -1,10 +1,9 @@
 @use "../utils/box-shadow.scss";
 @use "../utils/zoom.scss";
+@use "../utils/colors.scss";
 
 .explorer {
     text-align: center;
-    background-color: #fafafa;
-    padding: 1rem;
     
     & p {
       font-size: 1.3rem;
@@ -21,6 +20,7 @@
       background-image: linear-gradient(to top, rgba(147, 86, 255, 0.9), rgba(255, 121, 218, 0.9));
       transition: transform 200ms;
       margin-top: 1rem;
+      margin-bottom: 1rem;
     }
     
     & button:hover {
