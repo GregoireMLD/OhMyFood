@@ -12,7 +12,12 @@ body {
 }
 
 main {
-  padding: 0 1rem;
+  padding: 0 7rem;
+}
+
+h2 {
+  padding: 2rem 0;
+  margin: 0;
 }
 
 header {
@@ -45,9 +50,6 @@ header {
   background-color: #fafafa;
   padding: 1rem;
 }
-.explorer h2 {
-  font-size: 2rem;
-}
 .explorer p {
   font-size: 1.3rem;
 }
@@ -70,6 +72,7 @@ header {
 
 .tuto {
   counter-reset: steps;
+  margin-bottom: 3rem;
 }
 .tuto ol {
   display: flex;
@@ -103,7 +106,7 @@ header {
   height: 2rem;
   border-radius: 50%;
   position: absolute;
-  bottom: 1rem;
+  bottom: 30%;
   left: -1rem;
 }
 .tuto li:hover {
@@ -113,6 +116,37 @@ header {
   margin-right: 1rem;
   color: #7e7e7e;
   font-size: 1.5rem;
+}
+
+.menus {
+  background-color: #f6f6f6;
+}
+.menus .menus_cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 1000px) {
+  .menus .menus_cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.menus .card_image {
+  height: 15rem;
+  border-radius: 1rem;
+  background-size: cover;
+}
+.menus .card_image-1 {
+  background-image: url(../../assets/menu-1.jpg);
+}
+.menus .card_image-2 {
+  background-image: url(../../assets/menu-2.jpg);
+}
+.menus .card_image-3 {
+  background-image: url(../../assets/menu-3.jpg);
+}
+.menus .card_image-4 {
+  background-image: url(../../assets/menu-4.jpg);
 }
 
 /*# sourceMappingURL=style.css.map */

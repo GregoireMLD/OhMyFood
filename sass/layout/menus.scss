@@ -1,0 +1,28 @@
+@use  "../utils/variables.scss";
+
+.menus {
+    background-color: #f6f6f6;
+
+    .menus_cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;   
+        @media (max-width: variables.$breakpoint) {
+            grid-template-columns: repeat(1, 1fr);         
+        }
+    }
+
+    .card {
+        &_image {
+            height: 15rem;
+            border-radius: 1rem;
+            background-size: cover;
+        } 
+
+        @for $i from 1 through 4 {
+            &_image-#{$i} {
+                background-image: url(../../assets/menu-#{$i}.jpg);
+            }
+        }
+    }
+}
