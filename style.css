@@ -11,6 +11,10 @@ body {
   margin: 0px;
 }
 
+main {
+  padding: 0 1rem;
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -18,6 +22,10 @@ header {
   padding: 0.3rem;
   margin: 0;
   position: relative;
+}
+
+.grey-background {
+  background-color: #F3F3F3;
 }
 
 .lieu {
@@ -28,30 +36,21 @@ header {
   text-align: center;
   padding: 0.5rem;
 }
-
-.grey-background {
-  background-color: #F3F3F3;
-  padding-bottom: 4rem;
-}
-
-main .lieu i {
+.lieu i {
   font-size: 1.5rem;
 }
 
-/* EXPLORER */
 .explorer {
   text-align: center;
+  background-color: #fafafa;
+  padding: 1rem;
 }
-
 .explorer h2 {
-  margin-top: 2rem;
   font-size: 2rem;
 }
-
 .explorer p {
   font-size: 1.3rem;
 }
-
 .explorer button {
   color: white;
   font-weight: bold;
@@ -59,18 +58,37 @@ main .lieu i {
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
-  box-shadow: 2px 1px 16px -3px #000000;
+  box-shadow: 2px 1px 8px -3px #000000;
   background-image: linear-gradient(to top, rgba(147, 86, 255, 0.9), rgba(255, 121, 218, 0.9));
   transition: transform 200ms;
   margin-top: 1rem;
 }
-
 .explorer button:hover {
   transform: scale(1.02);
   opacity: 0, 9;
 }
 
-/*# sourceMappingURL=style.css.map */
-/*# sourceMappingURL=style.css.map */
+.tuto ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+@media (max-width: 800px) {
+  .tuto ol {
+    flex-direction: column;
+  }
+}
+.tuto li {
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  border: 1px solid red;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+}
+.tuto li:hover {
+  transform: scale(1.02);
+}
 
 /*# sourceMappingURL=style.css.map */
