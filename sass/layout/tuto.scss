@@ -1,25 +1,49 @@
 @use "../utils/zoom.scss";
 @use "../utils/box-shadow.scss";
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
 
 .tuto {
+    counter-reset: steps;
     & ol {
         display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
+        gap: 2rem;
         border-radius: 1rem;
-        @media (max-width: 800px) {
+        @media (max-width: 1000px) {
             flex-direction: column;
         }
     }
     & li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::before {
+            content: counter(steps);
+            counter-increment: steps;
+            color: white;
+            background-color: colors.$purple;
+            display: grid;
+            place-items: center;
+            width: 2 * variables.$tuto-bullet-heighs;
+            height: 2 * variables.$tuto-bullet-heighs;
+            border-radius: 50%;
+            position: absolute;
+            bottom: variables.$tuto-bullet-heighs;
+            left: -1 * variables.$tuto-bullet-heighs;
+        }
+        list-style-type: none;
         background-color: #f6f6f6;
-        padding: 1rem 2rem;
-        border: 1px solid red;
+        padding: 1.5rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
         @include box-shadow.base-shadow;
         &:hover{
             @include zoom.zoom;
+        }
+        & i.fas {
+            margin-right: 1rem;
+            color: colors.$lightgrey;
+            font-size: 1.5rem;
         }
     }
 }
