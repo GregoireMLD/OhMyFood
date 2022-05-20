@@ -4,7 +4,7 @@
   "description": "mon projet openclassrooms",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch style.scss style.css"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "homepage": "https://github.com/GregoireMLD/OhMyFood#readme",
   "devDependencies": {
     "sass": "^1.52.0"
+  },
+  "dependencies": {
+    "react": "^18.1.0"
   }
 }
