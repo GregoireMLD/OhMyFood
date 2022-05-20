@@ -22,7 +22,7 @@
         display: flex;
         align-items: center;
         position: relative;
-        width: 98%;
+        width: 95%;
         &::before {
             content: counter(steps);
             counter-increment: steps;

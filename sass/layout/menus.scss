@@ -1,14 +1,20 @@
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
+@use "../utils/box-shadow.scss";
 
 .menus {
     background-color: #f6f6f6;
+    padding-bottom: 4rem;
+
+    h2 {
+        padding-top: 3rem;
+    }
 
     .menus_cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;   
-        margin: 0.5rem 1rem 3rem 1rem;
+        margin: 0.5rem 1rem 0rem 1rem;
         @media (max-width: variables.$breakpoint) {
             grid-template-columns: repeat(1, 1fr);         
         }
@@ -32,7 +38,7 @@
     .card {
         &_image {
             height: 14rem;
-            border-radius: 1rem;
+            border-radius: 1rem 1rem 0 0;
             background-size: cover;
             
             
@@ -43,5 +49,26 @@
                 background-image: url(../../assets/menu-#{$i}.jpg);
             }
         }
+      &_description {
+          position: relative;
+          background-color: white;
+          border-radius: 0px 0px 20px 20px;
+          @include box-shadow.base-shadow;
+          p {
+              padding-bottom: 1rem;
+              padding-left: 1rem;
+          }
+          h4 {
+              padding-top: 1rem;
+              padding-left: 1rem;
+              margin-bottom: 0.5rem;
+          }
+          i {
+              font-size: 1.5rem;
+              position: absolute;
+              right: 1rem;
+              top: 30%;
+          }
+      }
     }
 }
