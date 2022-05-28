@@ -1,6 +1,7 @@
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
 @use "../utils/box-shadow.scss";
+@use "../utils/linear-gradient.scss";
 
 .menus {
     background-color: #f6f6f6;
@@ -68,6 +69,18 @@
               position: absolute;
               right: 1rem;
               top: 30%;
+          }
+          .fas {
+              color: transparent;
+              background-clip: text;
+              -webkit-background-clip: text;
+              opacity: 0;
+              transition: all 200ms ease-in-out;
+              @include linear-gradient.gradient(1);
+          }
+          &:hover .fas {
+              opacity: 1;
+              transform: scale(1.1);
           }
       }
     }

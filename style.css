@@ -212,6 +212,18 @@ header {
   right: 1rem;
   top: 30%;
 }
+.menus .card_description .fas {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 255), rgb(255, 121, 218));
+}
+.menus .card_description:hover .fas {
+  opacity: 1;
+  transform: scale(1.1);
+}
 
 footer {
   background-color: #353535;

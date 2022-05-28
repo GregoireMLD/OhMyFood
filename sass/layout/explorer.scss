@@ -1,6 +1,7 @@
 @use "../utils/box-shadow.scss";
 @use "../utils/zoom.scss";
 @use "../utils/colors.scss";
+@use "../utils/linear-gradient.scss";
 
 .explorer {
     text-align: center;
@@ -24,7 +25,7 @@
       border: none;
       border-radius: 2rem;
       @include box-shadow.base-shadow;
-      background-image: linear-gradient(to top, rgba(147, 86, 255, 0.9), rgba(255, 121, 218, 0.9));
+      @include linear-gradient.gradient;
       transition: transform 200ms;
       margin-top: 2rem;
       margin-bottom: 3rem;
