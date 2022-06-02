@@ -2,6 +2,9 @@
 @use "../utils/colors.scss";
 @use "../utils/mixins";
 
+
+#homepage{
+
 .menus {
     background-color: #f6f6f6;
     padding-bottom: 4rem;
@@ -64,4 +67,5 @@
           }
       }
     }
+}
 }

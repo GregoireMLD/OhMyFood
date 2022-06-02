@@ -1,5 +1,12 @@
 @use "../utils/mixins.scss";
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
 
+body {
+    background-color: colors.$lightergrey;
+}
+
+#page-resto {
 .banner img {
     display: block;
     width: 100%;
@@ -8,12 +15,32 @@
     object-position: center bottom;
 }
 
-.resto_main {
+.resto_title {
     margin-top: -2rem;
     h2 {
         font-family: "shrikhand", "sans-serif";
         padding: 2rem 1rem;
         @include mixins.heart-animated;
+        background-color: colors.$lightergrey;
         border-radius: 2rem 2rem 0 0;
     }
+}
+.resto-main {
+    padding: 0 1rem;
+}
+.menus {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    @media (max-width: variables.$breakpoint) {
+        grid-template-columns: 1fr;
+    }
+    .menus__category {
+        
+    }
+}
+
+.resto-main {
+    padding: 0 1rem;
+}
 }
