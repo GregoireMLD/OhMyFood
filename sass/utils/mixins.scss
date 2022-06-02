@@ -29,3 +29,23 @@
     opacity: $opacity;
     transition: all 200ms ease-in-out;
 }
+
+@mixin heart-animated {
+    position: relative;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    &::before {
+        @include heart;
+    }
+
+    &::after {
+        //($opacity: *, $font-weight: *, $color: *)//
+    @include heart(0, 900, transparent);
+    @include gradient(1);
+    }    
+
+    &:hover::after {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}

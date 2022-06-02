@@ -50,25 +50,8 @@
             }
         }
       &_description {
-          position: relative;
-          background-color: white;
-          border-radius: 0px 0px 20px 20px;
-          &::before {
-              @include mixins.heart;
-          }
-
-          &::after {
-              //($opacity: *, $font-weight: *, $color: *)//
-            @include mixins.heart(0, 900, transparent);
-            @include mixins.gradient(1);
-          }    
-
-          &:hover::after {
-              opacity: 1;
-              transform: scale(1.1);
-          }
-
-          @include mixins.base-shadow;
+        @include mixins.heart-animated;
+        @include mixins.base-shadow;
 
           p {
               padding-bottom: 1rem;
