@@ -347,8 +347,37 @@ body {
     grid-template-columns: 1fr;
   }
 }
-#page-resto .resto-main {
-  padding: 0 1rem;
+#page-resto .menus .menus__category {
+  background: white;
+}
+#page-resto .menus .menus__category .menu-item {
+  display: flex;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 9px -6px #000000;
+}
+#page-resto .menus .menus__category .menu-item .menu-item__prix {
+  margin-left: auto;
+  font-weight: 900;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+#page-resto .menus .menus__category .menu-item .menu-item__description {
+  padding: 1rem;
+}
+#page-resto .menus .menus__category .menu-item .menu-item__check {
+  background-color: #99e2d0;
+  border-radius: 0 1rem 1rem 0;
+  margin-right: -4rem;
+  width: 4rem;
+  transition: margin-right 0.5s;
+}
+#page-resto .menus .menus__category .menu-item:hover .menu-item__check {
+  margin-right: 0;
+}
+#page-resto h3 {
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

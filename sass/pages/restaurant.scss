@@ -31,16 +31,42 @@ body {
 .menus {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 1rem;    
     @media (max-width: variables.$breakpoint) {
         grid-template-columns: 1fr;
     }
     .menus__category {
-        
+        background: white;
+        .menu-item {
+            display: flex;
+            overflow: hidden;
+            border-radius: 1rem;
+            @include mixins.box-shadow;
+            .menu-item__prix {
+                margin-left: auto;
+                font-weight: 900;
+                padding: 1rem;
+                display: flex;
+                align-items: flex-end;
+            }
+            .menu-item__description {
+                padding: 1rem;  
+            }
+            .menu-item__check {
+                background-color: colors.$color-tertiary;
+                border-radius: 0 1rem 1rem 0;
+                margin-right: -4rem;
+                width: 4rem;
+                transition: margin-right 0.5s;
+            }
+            &:hover .menu-item__check {
+                margin-right: 0;
+            }
+        }
     }
 }
 
-.resto-main {
-    padding: 0 1rem;
+h3 {
+    font-size: 20px;
 }
 }
