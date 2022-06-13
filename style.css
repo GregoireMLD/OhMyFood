@@ -82,28 +82,37 @@ header {
   cursor: pointer;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   background-image: linear-gradient(to top, rgba(147, 86, 255, 0.9), rgba(255, 121, 218, 0.9));
+  font-size: 1rem;
 }
 .explorer button:hover {
-  transform: none scale(1.02);
+  transform: scale(1.02);
   opacity: 0, 9;
 }
 
 .loader {
   position: fixed;
+  display: grid;
+  place-items: center;
   background-color: #ffffff;
   height: 100vh;
   inset: 0;
   z-index: 1;
   opacity: 0.8;
-  animation: disappear 1s;
+  animation: disappear 200ms 1.5s forwards;
+  transform-origin: top;
+}
+.loader i {
+  animation: spin 1.5s infinite linear;
 }
 
 @keyframes disappear {
-  0% {
-    transform: scale(1);
-  }
-  100% {
+  to {
     transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 .tuto {
@@ -153,7 +162,7 @@ header {
   left: -15px;
 }
 .tuto li:hover {
-  transform: none scale(1.02);
+  transform: scale(1.02);
   background-color: #E6E6FA;
 }
 .tuto li i.fas {
@@ -435,6 +444,9 @@ h1 {
 #page-resto .menus .menus__category .menu-item:nth-child(3) {
   animation-delay: 300ms;
 }
+#page-resto .menus .menus__category .menu-item:nth-child(4) {
+  animation-delay: 400ms;
+}
 #page-resto .menus .menus__category .menu-item .menu-item__prix {
   margin-left: auto;
   font-weight: 900;
@@ -508,7 +520,7 @@ h1 {
   background-image: linear-gradient(to top, rgba(147, 86, 255, 0.9), rgba(255, 121, 218, 0.9));
 }
 #page-resto section.order button:hover {
-  transform: none scale(1.02);
+  transform: scale(1.02);
   opacity: 0, 9;
 }
 #page-resto h3 {

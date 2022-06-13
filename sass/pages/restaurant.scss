@@ -75,7 +75,7 @@ h1 {
         overflow: hidden;
         
         .menu-item {
-            $numberOfItems: 3;
+            $numberOfItems: 4;
             @for $i from 1 through $numberOfItems {
                 &:nth-child(#{$i}) {
                     animation-delay: 100ms * $i;
