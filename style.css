@@ -255,7 +255,7 @@ header {
   position: absolute;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
-  font-weight: 400;
+  font-weight: 900;
   content: "\f004";
   font-size: 1.5rem;
   right: 1rem;
@@ -381,7 +381,7 @@ h1 {
   position: absolute;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
-  font-weight: 400;
+  font-weight: 900;
   content: "\f004";
   font-size: 1.5rem;
   right: 1rem;
