@@ -1,0 +1,10 @@
+@mixin spin {
+    @keyframes spin {
+        0% {
+            transform: rotate(-200deg);
+        }
+        100% {
+            transform: rotate(0);
+        }
+    }
+}

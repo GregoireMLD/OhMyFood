@@ -1,12 +1,27 @@
 @use "../utils/mixins.scss";
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
+@use "../utils/animations.scss";
 
 body {
     background-color: colors.$lightergrey;
 }
 
+h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
 #page-resto {
+    header::before {
+        @include mixins.font-awesome($font-weight: 900);
+        content: "\f060";
+        cursor: pointer;
+        left: 1rem;
+        font-size: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 .banner img {
     display: block;
     width: 100%;
@@ -31,17 +46,32 @@ body {
 .menus {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;    
+    gap: 1rem; 
     @media (max-width: variables.$breakpoint) {
         grid-template-columns: 1fr;
     }
+    h3 {
+       text-transform: uppercase;
+       font-weight: 400; 
+       position: relative;
+       &::after {
+           content: "";
+           position: absolute;
+           top: 1.6rem;
+           left: 0rem;
+           height: 0.25rem;
+           width: 3rem;
+           background-color: colors.$color-tertiary;
+       }
+    }
     .menus__category {
-        background: white;
+        overflow: hidden;
         .menu-item {
             display: flex;
-            overflow: hidden;
             border-radius: 1rem;
-            @include mixins.box-shadow;
+            overflow: hidden; 
+            margin: 0.5rem;
+            @include mixins.base-shadow;
             .menu-item__prix {
                 margin-left: auto;
                 font-weight: 900;
@@ -51,20 +81,55 @@ body {
             }
             .menu-item__description {
                 padding: 1rem;  
-            }
+                overflow: hidden;
+                    h4,
+                    p{
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                }
             .menu-item__check {
+                display: grid;
+                place-items: center;
+                flex-shrink: 0;
                 background-color: colors.$color-tertiary;
                 border-radius: 0 1rem 1rem 0;
                 margin-right: -4rem;
                 width: 4rem;
                 transition: margin-right 0.5s;
+                i {
+                    display: grid;
+                    place-items: center;
+                    color : colors.$color-tertiary; 
+                    background: white;
+                    height: 2rem;
+                    width: 2rem;
+                    border-radius: 1rem;
+                }
             }
-            &:hover .menu-item__check {
-                margin-right: 0;
+            &:hover {
+                cursor: pointer;
+                .menu-item__check {
+                    margin-right: 0;
+                }
+                i {
+                    @include animations.spin;
+                    animation: spin 0.75s ease-in-out;
             }
+        }
         }
     }
 }
+
+    section.order{
+        height: 20vh;
+        display: grid;
+        place-items: center;
+        button {
+            @include mixins.base-button;
+        }
+    }
 
 h3 {
     font-size: 20px;
