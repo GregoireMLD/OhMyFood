@@ -4,7 +4,7 @@
 
 .tuto {
     counter-reset: steps;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     background: white;
     padding-bottom: 2rem;
     & ol {
@@ -47,6 +47,9 @@
         &:hover{
             @include mixins.zoom;
             background-color: colors.$lightpurple;
+            i.fas {
+                color : colors.$purple;
+            }
         }
         & i.fas {
             margin-right: 1rem;

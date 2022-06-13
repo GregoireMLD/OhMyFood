@@ -9,10 +9,6 @@
     background-color: #f6f6f6;
     padding-bottom: 4rem;
 
-    h2 {
-        padding-top: 3rem;
-    }
-
     .menus_cards {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -40,9 +36,10 @@
 
     .card {
         &_image {
-            height: 14rem;
+            height: 16rem;
             border-radius: 1rem 1rem 0 0;
             background-size: cover;
+            background-position: center;
             
             
         } 
