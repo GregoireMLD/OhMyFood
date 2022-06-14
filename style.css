@@ -503,7 +503,8 @@ h1 {
   }
 }
 #page-resto section.order {
-  height: 30vh;
+  height: 10vh;
+  padding-bottom: 10rem;
   display: grid;
   place-items: center;
 }
