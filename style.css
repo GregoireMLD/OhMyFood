@@ -67,6 +67,7 @@ header {
 .explorer h3 {
   margin: 0;
   padding-top: 1.5rem;
+  font-size: 25px;
   padding-bottom: 1.5rem;
 }
 .explorer button {
@@ -211,16 +212,16 @@ header {
   background-position: center;
 }
 #homepage .menus .card_image-1 {
-  background-image: url(../../assets/menu-1.jpg);
+  background-image: url(../assets/menu-1.jpg);
 }
 #homepage .menus .card_image-2 {
-  background-image: url(../../assets/menu-2.jpg);
+  background-image: url(../assets/menu-2.jpg);
 }
 #homepage .menus .card_image-3 {
-  background-image: url(../../assets/menu-3.jpg);
+  background-image: url(../assets/menu-3.jpg);
 }
 #homepage .menus .card_image-4 {
-  background-image: url(../../assets/menu-4.jpg);
+  background-image: url(../assets/menu-4.jpg);
 }
 #homepage .menus .card_description {
   position: relative;
@@ -502,7 +503,7 @@ h1 {
   }
 }
 #page-resto section.order {
-  height: 20vh;
+  height: 30vh;
   display: grid;
   place-items: center;
 }
