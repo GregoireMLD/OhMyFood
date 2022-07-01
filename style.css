@@ -213,24 +213,35 @@ header {
   background-position: center;
 }
 #homepage .menus .card_image-1 {
-  background-image: url(../assets/menu-1.jpg);
+  background-image: url(../../assets/menu-1.jpg);
 }
 #homepage .menus .card_image-2 {
-  background-image: url(../assets/menu-2.jpg);
+  background-image: url(../../assets/menu-2.jpg);
 }
 #homepage .menus .card_image-3 {
-  background-image: url(../assets/menu-3.jpg);
+  background-image: url(../../assets/menu-3.jpg);
 }
 #homepage .menus .card_image-4 {
-  background-image: url(../assets/menu-4.jpg);
+  background-image: url(../../assets/menu-4.jpg);
 }
 #homepage .menus .card_description {
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
+}
+#homepage .menus .card_description p {
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+#homepage .menus .card_description h4 {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+#homepage .menus .card_heart {
   position: relative;
   background-color: white;
   border-radius: 0px 0px 20px 20px;
-  box-shadow: 2px 1px 8px -3px #7e7e7e;
 }
-#homepage .menus .card_description::before {
+#homepage .menus .card_heart::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -242,14 +253,14 @@ header {
   content: "\f004";
   font-size: 1.5rem;
   right: 1rem;
-  top: 30%;
+  bottom: 25px;
   color: inherit;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-#homepage .menus .card_description::after {
+#homepage .menus .card_heart::after {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -261,7 +272,7 @@ header {
   content: "\f004";
   font-size: 1.5rem;
   right: 1rem;
-  top: 30%;
+  bottom: 25px;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -269,18 +280,9 @@ header {
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(to top, rgb(147, 86, 255), rgb(255, 121, 218));
 }
-#homepage .menus .card_description:hover::after {
+#homepage .menus .card_heart:hover::after {
   opacity: 1;
   transform: scale(1.1);
-}
-#homepage .menus .card_description p {
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-}
-#homepage .menus .card_description h4 {
-  padding-top: 1rem;
-  padding-left: 1rem;
-  margin-bottom: 0.5rem;
 }
 
 footer {
@@ -368,7 +370,7 @@ h1 {
   content: "\f004";
   font-size: 1.5rem;
   right: 1rem;
-  top: 30%;
+  bottom: 25px;
   color: inherit;
   background-clip: text;
   -webkit-background-clip: text;
@@ -387,7 +389,7 @@ h1 {
   content: "\f004";
   font-size: 1.5rem;
   right: 1rem;
-  top: 30%;
+  bottom: 25px;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;

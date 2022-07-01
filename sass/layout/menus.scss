@@ -49,8 +49,8 @@
                 background-image: url(../../assets/menu-#{$i}.jpg);
             }
         }
+        
       &_description {
-        @include mixins.heart-animated;
         @include mixins.base-shadow;
 
           p {
@@ -62,6 +62,10 @@
               padding-left: 1rem;
               margin-bottom: 0.5rem;
           }
+      }
+
+      &_heart {
+        @include mixins.heart-animated;
       }
     }
 }
